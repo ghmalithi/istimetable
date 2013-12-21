@@ -36,7 +36,7 @@ public class StudentClass {
     
     @Override
     public String toString(){
-        return name;
+        return name +": "+studentcount;
     }
     
 }
