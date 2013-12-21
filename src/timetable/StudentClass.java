@@ -1,12 +1,9 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package timetable;
 
 /**
  *
- * @author Malintha
+ * @author Malintha 
  */
 public class StudentClass {
     private String name;

@@ -1,7 +1,4 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package timetable;
 
 
@@ -10,11 +7,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 /**
  *
- * @author Malintha
+ * @author Malintha 
  */
 public class HomeWindow extends javax.swing.JFrame {
 
-    static StudentManagerWindow studentwindow;
+    static StudentManagerWindow classwindow ;
     static TeacherManagerWindow teacherwindow;
     static SubjectManagerWindow subjectwindow;
     
@@ -99,13 +96,13 @@ public class HomeWindow extends javax.swing.JFrame {
             public void run() {
                 
                 
-                studentwindow=new StudentManagerWindow();
+                classwindow=new StudentManagerWindow();
                 teacherwindow=new TeacherManagerWindow();
                 subjectwindow=new SubjectManagerWindow();
                 
                 HomeWindow homewindow=new HomeWindow();
                 homewindow.setVisible(true);
-                homewindow.getMainTabPane().addTab("Student Manager", studentwindow);
+                homewindow.getMainTabPane().addTab("Student Manager", classwindow);
                 homewindow.getMainTabPane().addTab("Subject Manager", subjectwindow);
                 homewindow.getMainTabPane().addTab("Teacher Manager", teacherwindow);
                 
