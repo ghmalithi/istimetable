@@ -6,12 +6,18 @@ package timetable;
 
 
 import javax.swing.*;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 /**
  *
- * @author dell
+ * @author Malintha
  */
 public class HomeWindow extends javax.swing.JFrame {
 
+    static StudentManagerWindow studentwindow;
+    static TeacherManagerWindow teacherwindow;
+    static SubjectManagerWindow subjectwindow;
+    
     /**
      * Creates new form HomeWindow
      */
@@ -93,15 +99,24 @@ public class HomeWindow extends javax.swing.JFrame {
             public void run() {
                 
                 
-                StudentManagerWindow studentwindow=new StudentManagerWindow();
-                TeacherManagerWindow teacherwindow=new TeacherManagerWindow();
-                SubjectManagerWindow subjectwindow=new SubjectManagerWindow();
+                studentwindow=new StudentManagerWindow();
+                teacherwindow=new TeacherManagerWindow();
+                subjectwindow=new SubjectManagerWindow();
                 
                 HomeWindow homewindow=new HomeWindow();
                 homewindow.setVisible(true);
                 homewindow.getMainTabPane().addTab("Student Manager", studentwindow);
                 homewindow.getMainTabPane().addTab("Subject Manager", subjectwindow);
                 homewindow.getMainTabPane().addTab("Teacher Manager", teacherwindow);
+                
+                homewindow.getMainTabPane().addChangeListener(new ChangeListener() {
+
+                    @Override
+                    public void stateChanged(ChangeEvent ce) {
+                        subjectwindow.update();
+                    }
+                });
+                
                 
             }
         });

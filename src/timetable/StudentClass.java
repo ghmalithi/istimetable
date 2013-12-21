@@ -6,7 +6,7 @@ package timetable;
 
 /**
  *
- * @author dell
+ * @author Malintha
  */
 public class StudentClass {
     private String name;

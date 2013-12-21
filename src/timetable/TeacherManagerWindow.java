@@ -6,7 +6,7 @@ package timetable;
 
 /**
  *
- * @author dell
+ * @author Lahiru
  */
 public class TeacherManagerWindow extends javax.swing.JPanel {
 

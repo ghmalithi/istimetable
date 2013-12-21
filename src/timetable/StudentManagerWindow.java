@@ -10,7 +10,7 @@ import javax.swing.JTextField;
 
 /**
  *
- * @author dell
+ * @author Malintha
  */
 public class StudentManagerWindow extends javax.swing.JPanel {
 
@@ -110,7 +110,7 @@ public class StudentManagerWindow extends javax.swing.JPanel {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
@@ -167,8 +167,8 @@ public class StudentManagerWindow extends javax.swing.JPanel {
         int selindex = jlistClasses.getSelectedIndex();
         if (selindex >= 0) {
             String ss = listClasses.get(selindex);
+            
             listClasses.remove(selindex);
-
             App.getClasses().remove(App.getClasses().indexOf(ss));
 
         }
