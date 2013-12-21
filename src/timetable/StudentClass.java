@@ -32,7 +32,11 @@ public class StudentClass {
     public void setStudentcount(int studentcount) {
         this.studentcount = studentcount;
     }
+   
     
-    
+    @Override
+    public String toString(){
+        return name;
+    }
     
 }
